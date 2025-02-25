@@ -8,6 +8,7 @@ interface BaseProps {
 }
 
 export const Button = React.forwardRef(
+  // @ts-ignore
   (
     {
       className,
@@ -37,6 +38,7 @@ export const Button = React.forwardRef(
 );
 
 export const Icon = React.forwardRef(
+  // @ts-ignore
   ({ className, ...props }: PropsWithChildren<BaseProps>, ref: Ref<HTMLSpanElement | null>) => (
     <span
       {...props}
@@ -54,6 +56,7 @@ export const Icon = React.forwardRef(
 );
 
 export const Menu = React.forwardRef(
+  // @ts-ignore
   ({ className, ...props }: PropsWithChildren<BaseProps>, ref: Ref<HTMLDivElement | null>) => {
     return (
       <div
@@ -81,6 +84,7 @@ export const Portal = ({ children }: { children: React.ReactNode }) => {
 };
 
 export const Toolbar = React.forwardRef(
+  // @ts-ignore
   ({ className, ...props }: PropsWithChildren<BaseProps>, ref?: Ref<HTMLDivElement>) => (
     <Menu
       {...props}
